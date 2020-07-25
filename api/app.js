@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/api/jobs", (req, res) => {
-  res.send("/api/jobs response!!!", console.log("scrapeWeb", scrapeWeb));
+  res.send("/api/jobs response!!!");
 });
 
 app.listen(port, (error) => {

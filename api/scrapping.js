@@ -2,11 +2,13 @@ const request = require("request-promise");
 const cheerio = require("cheerio");
 
 const BASE_URL =
-  "https://www.monster.com/jobs/search/?q=Developer&intcid=skr_navigation_nhpso_searchMain";
-const scrapeResults = [];
-async function scrapeWeb() {
+  "https://www.monster.com/jobs/search/?&intcid=skr_navigation_nhpso_searchMain&q=";
+
+const scrapedJobResults = [];
+
+async function searchJobs(searchQuery) {
   try {
-    const htmlResult = await request.get(BASE_URL);
+    const htmlResult = await request.get(`${BASE_URL}${searchQuery}`);
     const $ = await cheerio.load(htmlResult);
     $(".card-content").each((index, element) => {
       const link = $(element).children(".flex-row").find("a").attr("href");
@@ -34,7 +36,7 @@ async function scrapeWeb() {
         .find(".mux-company-logo")
         .find("img")
         .attr("src");
-      const scrapeResult = {
+      const scrapedResult = {
         link,
         jobTitle,
         company,
@@ -43,12 +45,10 @@ async function scrapeWeb() {
         datePosted,
         dateTextPosted,
       };
-      scrapeResults.push(scrapeResult);
+      scrapedJobResults.push(scrapedResult);
     });
-    console.log(scrapeResults);
   } catch (error) {
     console.log(error);
   }
 }
-
-module.exports = scrapeWeb;
+searchJobs("developer").then(() => console.log(scrapedJobResults));
