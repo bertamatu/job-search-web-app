@@ -50,4 +50,5 @@ async function scrapeWeb() {
     console.log(error);
   }
 }
-scrapeWeb();
+
+module.exports = scrapeWeb;
