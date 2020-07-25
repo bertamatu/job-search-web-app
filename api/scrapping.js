@@ -52,7 +52,6 @@ async function searchJobs(searchQuery) {
   } catch (error) {
     console.log(error);
   }
+  return scrapedJobResults;
 }
-searchJobs("developer").then(() => console.log(scrapedJobResults));
-
-module.exports = searchJobs;
+module.exports = { searchJobs };
