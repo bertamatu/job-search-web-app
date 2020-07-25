@@ -13,6 +13,7 @@ async function searchJobs(searchQuery) {
     $(".card-content").each((index, element) => {
       const link = $(element).children(".flex-row").find("a").attr("href");
       const jobTitle = $(element).children(".flex-row").find("a").text();
+      const jobId = $(element).attr("data-jobid");
       const company = $(element)
         .children(".flex-row")
         .find(".company")
@@ -37,6 +38,7 @@ async function searchJobs(searchQuery) {
         .find("img")
         .attr("src");
       const scrapedResult = {
+        jobId,
         link,
         jobTitle,
         company,
@@ -52,3 +54,5 @@ async function searchJobs(searchQuery) {
   }
 }
 searchJobs("developer").then(() => console.log(scrapedJobResults));
+
+module.exports = searchJobs;
