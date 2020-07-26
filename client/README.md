@@ -2,13 +2,24 @@
 <hr/>
 <code><b>node.js | cheerio | express | react js</b></code><br />
 Job search web app. <br />
----<br />
-Class component was used for learning purposes.<br />
+About the APP<br/>
+There are two separated apps. <br/>
+The Client which serves the FrontEnd - using <b><code>React Js</code></b>), and the API - using <b><code>Node/Express/Cheerio</code></b>.<br/><br/>
+<b>How to run the API</b><br/><br/>
+In your terminal, navigate to the api directory.<br/>
+Run <code>npm install</code> to install all dependencies.<br/>
+Run <code>npm start</code> to start the app.<br/>
+<b>How to run the Client:</b><br/>
+In another terminal, navigate to the client directory.<br/>
+Run <code>npm install</code> to install all dependencies.<br/>
+Run <code>npm start</code> to start the app<br/>
+Check if they are connected<br/><br/>
+With the two apps running, open your browser in http://localhost:3000/.<br/>
+Search For a Job!<br/>
 <hr/>
 <hr/>
 <hr/>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the project directory, you can run:
