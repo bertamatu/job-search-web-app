@@ -1,8 +1,7 @@
-<h5>This project is made for learning purposes only.</h5><br /><br /><br />
+<h2>This project is made for learning purposes only.</h2><br />
 <hr/>
 <hr/>
 <hr/>
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
