@@ -1,18 +1,18 @@
-const express = require("express"); // -- returns a function
+const express = require("express");
 const cors = require("cors");
 const scraper = require("./scrapping");
 
-const app = express(); // -- returns an object of type express
+const app = express();
 
-app.use(cors()); // -- that any front-end client could make a request
+app.use(cors());
 
-const port = process.env.PORT || 3333; // -- environment variable PORT or manual port
+const port = process.env.PORT || 3333;
 
 app.get("/", (req, res) => {
   res.json({ message: "This is hello from app.js '/' route" });
 });
 
-// http://localhost:3000/search/SEARCH-TIME // -- works
+// http://localhost:3000/search/SEARCH-TERM // -- works
 app.get("/search/:jobTitle", (req, res) => {
   scraper.searchJobs(req.params.jobTitle).then((jobs) => {
     res.json(jobs);
