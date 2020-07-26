@@ -8,7 +8,7 @@ The Client which serves the FrontEnd - using <b><code>React Js</code></b>, and t
 <h2>How to run the API</h2><br/>
 In your terminal, navigate to the api directory.<br/>
 Run <code>npm install</code> to install all dependencies.<br/>
-Run <code>npm start</code> to start the app.<br/><br/>
+Run <code>node app.js</code> to start the app.<br/><br/>
 <h2>How to run the CLIENT:</h2><br/>
 In another terminal, navigate to the client directory.<br/>
 Run <code>npm install</code> to install all dependencies.<br/>
