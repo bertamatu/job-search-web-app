@@ -35,7 +35,7 @@ export class App extends Component {
           />
           <button type="submit">Search</button>
         </form>
-        {this.state.jobs.slice(2, 20).map((job, index) => {
+        {this.state.jobs.slice(0, 20).map((job, index) => {
           return (
             <div key={index}>
               {job.jobTitle} <br />
