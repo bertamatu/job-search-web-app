@@ -2,19 +2,19 @@
 <hr/>
 <code><b>node.js | cheerio | express | react js</b></code><br />
 Job search web app. <br />
-<h1>About the APP</h1><br/>
+<h1>About the APP</h1><br
 There are two separated apps. <br/>
 The Client which serves the FrontEnd - using <b><code>React Js</code></b>, and the API - using <b><code>Node/Express/Cheerio</code></b>.<br/><br/>
-<h2>How to run the API</h2><br/><br/>
+<h2>How to run the API</h2><br/>
 In your terminal, navigate to the api directory.<br/>
 Run <code>npm install</code> to install all dependencies.<br/>
 Run <code>npm start</code> to start the app.<br/><br/>
-<h2>How to run the Client:</h2><br/>
+<h2>How to run the CLIENT:</h2><br/>
 In another terminal, navigate to the client directory.<br/>
 Run <code>npm install</code> to install all dependencies.<br/>
 Run <code>npm start</code> to start the app<br/>
 <hr/>
-With the two apps running, open your browser in <a href="http://localhost:3000/"></a>http://localhost:3000/ .<br/>
+With the two apps running, open your browser in <a href="http://localhost:3000/">http://localhost:3000/</a>.<br/>
 Search For a Job!<br/>
 <hr/>
 <hr/>
