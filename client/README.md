@@ -1,5 +1,10 @@
 <h2>This project is made for learning purposes only.</h2><br />
 <hr/>
+<code><b>node.js | cheerio | express | react js</b></code><br />
+Job search web app. <br />
+---<br />
+Class component was used for learning purposes.<br />
+<hr/>
 <hr/>
 <hr/>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
