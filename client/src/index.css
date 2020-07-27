@@ -5,8 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  padding: 5rem;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://cdn.pixabay.com/photo/2016/03/25/01/14/abstract-1277995_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 code {
