@@ -23,12 +23,10 @@ export class App extends Component {
           loading: false,
           jobs: responseData,
         });
-        console.log("responseData", responseData);
       })
       .catch((error) => {
         console.log("Error fetch!", error);
       });
-    console.log("JOBS", this.state.jobs);
   };
 
   render() {
