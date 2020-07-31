@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { GoLocation } from "react-icons/go";
+import { GoLocation, GoBriefcase, GoInfo } from "react-icons/go";
 
 const SearchResults = (props) => (
   <section>
@@ -8,13 +8,16 @@ const SearchResults = (props) => (
       return (
         <JobCard key={index}>
           <JobInfo>
-            {" "}
             {/* <img src={job.companyLogo} alt="company-logo" /> */}
+            <GoBriefcase />
             {job.jobTitle}
             <br />
             {job.company} <br />
             {/* {job.dateTextPosted} <br /> */}
-            <a href={job.link}>Read more</a>
+            <a href={job.link}>
+              <GoInfo />
+              Read more
+            </a>
           </JobInfo>
           <JobLocation>
             <GoLocation />
