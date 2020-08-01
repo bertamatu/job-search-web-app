@@ -1,14 +1,13 @@
 const request = require("request-promise");
 const cheerio = require("cheerio");
 
-const BASE_URL =
-  "https://www.monster.com/jobs/search/?&intcid=skr_navigation_nhpso_searchMain&q=";
-
 const scrapedJobResults = [];
 
 async function searchJobs(searchQuery) {
   try {
-    const htmlResult = await request.get(`${BASE_URL}${searchQuery}`);
+    const htmlResult = await request.get(
+      `https://www.monster.com/jobs/search/?q=${searchQuery}&intcid=skr_navigation_nhpso_searchMainPrefill`
+    );
     const $ = await cheerio.load(htmlResult);
     $(".card-content").each((index, element) => {
       const link = $(element).children(".flex-row").find("a").attr("href");
