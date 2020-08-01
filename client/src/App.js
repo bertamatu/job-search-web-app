@@ -21,14 +21,17 @@ export class App extends Component {
       .then((responseData) => {
         this.setState({
           loading: false,
-          jobs: responseData,
+          jobs: responseData.filter((job) => {
+            return job.jobTitle !== "" && job.companyLogo !== undefined;
+          }),
         });
+        console.log("responseData", responseData);
+        console.log("NEW jobs array", this.state.jobs);
       })
       .catch((error) => {
         console.log("Error fetch!", error);
       });
   };
-
   render() {
     if (this.state.loading === true) {
       return (

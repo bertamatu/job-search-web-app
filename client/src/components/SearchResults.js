@@ -8,12 +8,12 @@ const SearchResults = (props) => (
       return (
         <JobCard key={index}>
           <JobInfo>
-            {/* <img src={job.companyLogo} alt="company-logo" /> */}
+            <img src={job.companyLogo} alt="company-logo" />
             <GoBriefcase />
             {job.jobTitle}
             <br />
             {job.company} <br />
-            {/* {job.dateTextPosted} <br /> */}
+            {job.dateTextPosted} <br />
             <a href={job.link}>
               <GoInfo />
               Read more
