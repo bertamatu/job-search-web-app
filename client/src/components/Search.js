@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import SearchResults from "./components/SearchResults";
 import styled from "styled-components";
 const API_URL = "http://localhost:3333/search/";
 
-export class App extends Component {
+export class Search extends Component {
   state = {
     jobs: [],
     searchQuery: "",
@@ -26,7 +25,7 @@ export class App extends Component {
           }),
         });
         console.log("responseData", responseData);
-        console.log("NEW jobs array", this.state.jobs);
+        console.log("jobs", this.state.jobs);
       })
       .catch((error) => {
         console.log("Error fetch!", error);
@@ -53,14 +52,15 @@ export class App extends Component {
             value={this.state.searchQuery}
             onChange={(e) => this.setState({ searchQuery: e.target.value })}
           />
-          <SubmitButton type="submit">GO</SubmitButton>
+          <SubmitButton onClick={(e) => (e.target.value = "")} type="submit">
+            GO
+          </SubmitButton>
         </SearchHeader>
-        <SearchResults jobs={this.state.jobs} />
       </div>
     );
   }
 }
-export default App;
+export default Search;
 
 const SearchHeader = styled.form`
   display: flex;
