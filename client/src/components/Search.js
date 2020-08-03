@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import SearchResults from "./SearchResults";
+
 const API_URL = "http://localhost:3333/search/";
 
-export class Search extends Component {
+export default class Search extends Component {
   state = {
     jobs: [],
     searchQuery: "",
     loading: true,
   };
+
   componentDidMount() {
     this.setState({ loading: false });
   }
@@ -56,11 +59,12 @@ export class Search extends Component {
             GO
           </SubmitButton>
         </SearchHeader>
+
+        <SearchResults jobs={this.state.jobs} />
       </div>
     );
   }
 }
-export default Search;
 
 const SearchHeader = styled.form`
   display: flex;

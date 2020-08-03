@@ -4,7 +4,7 @@ import { GoLocation } from "react-icons/go";
 
 const SearchResults = (props) => (
   <section>
-    {props.jobs.slice(0, 8).map((job, index) => {
+    {props.jobs.map((job, index) => {
       return (
         <JobCard key={index}>
           <JobInfo>
